@@ -10,11 +10,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: CopyPublishBuildArtifacts@1
-  inputs:
-    CopyRoot: '$(Agent.BuildDirectory).'
-    ArtifactName: 'warfile'
-    ArtifactType: 'FilePath'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
